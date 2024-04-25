@@ -53,9 +53,17 @@
 
 ## Решение
 
-VM'S
+**VM'S**
 
-[]
+![vm](https://github.com/zatulik2606/Diplomnew/blob/main/screen/vm.jpg)
+
+**Bucket**
+
+![Bucket](https://github.com/zatulik2606/Diplomnew/blob/main/screen/bucket.jpg)
+
+**Network**
+
+![net](https://github.com/zatulik2606/Diplomnew/blob/main/screen/network.jpg)
 
 ---
 ### Создание Kubernetes кластера
