@@ -142,6 +142,33 @@ users:
 ~~~
 </details>
 
+
+Проверяю pods
+
+~~~
+ubuntu@node0:~$ sudo kubectl get pods --all-namespaces
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS   AGE
+kube-system   calico-kube-controllers-6c7b7dc5d8-lq7bt   1/1     Running   0          98m
+kube-system   calico-node-4n449                          1/1     Running   0          99m
+kube-system   calico-node-f8jk4                          1/1     Running   0          99m
+kube-system   calico-node-gsmmc                          1/1     Running   0          99m
+kube-system   coredns-69db55dd76-4wsgb                   1/1     Running   0          98m
+kube-system   coredns-69db55dd76-cx7g4                   1/1     Running   0          98m
+kube-system   dns-autoscaler-6f4b597d8c-4hthw            1/1     Running   0          98m
+kube-system   kube-apiserver-node0                       1/1     Running   1          101m
+kube-system   kube-controller-manager-node0              1/1     Running   2          101m
+kube-system   kube-proxy-hhk7d                           1/1     Running   0          100m
+kube-system   kube-proxy-mgwsg                           1/1     Running   0          100m
+kube-system   kube-proxy-n6wrp                           1/1     Running   0          100m
+kube-system   kube-scheduler-node0                       1/1     Running   1          101m
+kube-system   nginx-proxy-node1                          1/1     Running   0          100m
+kube-system   nginx-proxy-node2                          1/1     Running   0          100m
+kube-system   nodelocaldns-j779q                         1/1     Running   0          98m
+kube-system   nodelocaldns-p9jcw                         1/1     Running   0          98m
+kube-system   nodelocaldns-xwcfg                         1/1     Running   0          98m
+
+~~~
+
 ---
 ### Создание тестового приложения
 
