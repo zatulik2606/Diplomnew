@@ -89,6 +89,8 @@
 3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.
 
 
+## Решение
+
 Для создания использовал [Kubespray](https://kubernetes.io/docs/setup/production-environment/tools/kubespray/)
 
 После установки проверяю версию
