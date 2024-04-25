@@ -53,6 +53,8 @@
 
 ## Решение
 
+Для создания использовал [конфигурацию](https://github.com/zatulik2606/Diplomnew/tree/main/bucket)
+
 **VM'S**
 
 ![vm](https://github.com/zatulik2606/Diplomnew/blob/main/screen/vm.jpg)
