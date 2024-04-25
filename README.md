@@ -189,6 +189,17 @@ kube-system   nodelocaldns-xwcfg                         1/1     Running   0    
 1. Git репозиторий с тестовым приложением и Dockerfile.
 2. Регистри с собранным docker image. В качестве регистри может быть DockerHub или [Yandex Container Registry](https://cloud.yandex.ru/services/container-registry), созданный также с помощью terraform.
 
+
+## Решение
+
+В данной [папке](https://github.com/zatulik2606/Diplomnew/tree/main/myapp) находится конфигурация
+
+
+Это [Dockerfile](https://github.com/zatulik2606/Diplomnew/blob/main/myapp/Dockerfile)
+
+
+Это [Образ в Docker.io](https://hub.docker.com/r/zatulik2606/myapp/tags)
+
 ---
 ### Подготовка cистемы мониторинга и деплой приложения
 
