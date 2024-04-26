@@ -261,6 +261,27 @@ Visit https://github.com/prometheus-operator/kube-prometheus for instructions on
 
 ~~~
 
+Для полкдлючения к серверу настрою сервисы prometheus и grafana изменив на  NodePort
+
+
+~~~
+kubectl edit svc stable-kube-prometheus-sta-prometheus -n monitoring
+
+kubectl edit svc stable-grafana -n monitoring
+
+
+ubuntu@node0:~$ kubectl get svc -n monitoring
+NAME                                      TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                      AGE
+alertmanager-operated                     ClusterIP   None            <none>        9093/TCP,9094/TCP,9094/UDP   6m4s
+prometheus-operated                       ClusterIP   None            <none>        9090/TCP                     6m4s
+stable-grafana                            NodePort    10.233.63.222   <none>        80:32108/TCP                 6m14s
+stable-kube-prometheus-sta-alertmanager   ClusterIP   10.233.7.12     <none>        9093/TCP,8080/TCP            6m14s
+stable-kube-prometheus-sta-operator       ClusterIP   10.233.41.148   <none>        443/TCP                      6m14s
+stable-kube-prometheus-sta-prometheus     ClusterIP   10.233.10.254   <none>        9090/TCP,8080/TCP            6m14s
+stable-kube-state-metrics                 ClusterIP   10.233.60.38    <none>        8080/TCP                     6m14s
+stable-prometheus-node-exporter           ClusterIP   10.233.62.37    <none>        9100/TCP                     6m14s
+
+~~~
 
 
 ---
