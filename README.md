@@ -289,6 +289,18 @@ stable-prometheus-node-exporter           ClusterIP   10.233.62.37    <none>    
 
 ~~~
 
+Для подключения используем
+
+UserName: admin Password: prom-operator
+
+**Grafana**
+
+![Grafana](https://github.com/zatulik2606/Diplomnew/blob/main/screen/grafana.jpg)
+
+
+**Prometeheus**
+
+![Prometheus](https://github.com/zatulik2606/Diplomnew/blob/main/screen/prometheus.jpg)
 ---
 ### Установка и настройка CI/CD
 
