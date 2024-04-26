@@ -221,6 +221,48 @@ kube-system   nodelocaldns-xwcfg                         1/1     Running   0    
 3. Дашборды в grafana отображающие состояние Kubernetes кластера.
 4. Http доступ к тестовому приложению.
 
+
+## Решение
+
+Устанавливаю helm.
+
+~~~
+ubuntu@node0:~$ $curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+-fsSL: command not found
+ubuntu@node0:~$ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+ubuntu@node0:~$ chmod 700 get_helm.sh
+ubuntu@node0:~$ ./get_helm.sh
+[WARNING] Could not find git. It is required for plugin installation.
+Downloading https://get.helm.sh/helm-v3.14.4-linux-amd64.tar.gz
+Verifying checksum... Done.
+Preparing to install helm into /usr/local/bin
+helm installed into /usr/local/bin/helm
+
+~~~
+
+Скачиваю репо
+
+~~~
+ubuntu@node0:~$ kubectl create namespace monitoring
+namespace/monitoring created
+ubuntu@node0:~$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+"prometheus-community" has been added to your repositories
+ubuntu@node0:~$ helm install stable prometheus-community/kube-prometheus-stack --namespace=monitoring
+NAME: stable
+LAST DEPLOYED: Fri Apr 26 08:34:42 2024
+NAMESPACE: monitoring
+STATUS: deployed
+REVISION: 1
+NOTES:
+kube-prometheus-stack has been installed. Check its status by running:
+  kubectl --namespace monitoring get pods -l "release=stable"
+
+Visit https://github.com/prometheus-operator/kube-prometheus for instructions on how to create & configure Alertmanager and Prometheus instances using the Operator.
+
+~~~
+
+
+
 ---
 ### Установка и настройка CI/CD
 
