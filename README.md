@@ -171,6 +171,12 @@ kube-system   nodelocaldns-xwcfg                         1/1     Running   0    
 
 ~~~
 
+Подключаемс к grafana и проверяем
+
+~~~
+
+UserName: admin Password: prom-operator
+
 ---
 ### Создание тестового приложения
 
