@@ -171,11 +171,6 @@ kube-system   nodelocaldns-xwcfg                         1/1     Running   0    
 
 ~~~
 
-Подключаемс к grafana и проверяем
-
-~~~
-
-UserName: admin Password: prom-operator
 
 ---
 ### Создание тестового приложения
@@ -230,7 +225,9 @@ UserName: admin Password: prom-operator
 
 ## Решение
 
-Устанавливаю helm.
+
+Устанавливаю helm
+
 
 ~~~
 ubuntu@node0:~$ $curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
@@ -267,7 +264,7 @@ Visit https://github.com/prometheus-operator/kube-prometheus for instructions on
 
 ~~~
 
-Для полкдлючения к серверу настрою сервисы prometheus и grafana изменив на  NodePort
+Для подключения к серверу настрою сервисы prometheus и grafana изменив на  NodePort
 
 
 ~~~
@@ -298,7 +295,7 @@ UserName: admin Password: prom-operator
 ![Grafana](https://github.com/zatulik2606/Diplomnew/blob/main/screen/grafana.jpg)
 
 
-**Prometeheus**
+**Prometheus**
 
 ![Prometheus](https://github.com/zatulik2606/Diplomnew/blob/main/screen/prometheus.jpg)
 ---
