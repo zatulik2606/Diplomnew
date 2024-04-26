@@ -281,7 +281,7 @@ stable-kube-prometheus-sta-prometheus     NodePort    10.233.10.254   <none>    
 stable-kube-state-metrics                 ClusterIP   10.233.60.38    <none>        8080/TCP                        9m27s
 stable-prometheus-node-exporter           ClusterIP   10.233.62.37    <none>        9100/TCP                        9m27s
 
-
+~~~
 
 ---
 ### Установка и настройка CI/CD
