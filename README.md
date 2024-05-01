@@ -296,6 +296,33 @@ UserName: admin Password: prom-operator
 
 
 
+Поменял конфиги через helm и установил приложение.
+
+~~
+ubuntu@node0:~/myapp$ helm install myapp ./
+NAME: myapp
+LAST DEPLOYED: Wed May  1 10:56:25 2024
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+
+~~
+
+Проверяю Pod и Service.
+
+
+~~~
+
+ubuntu@node0:~/myapp$ kubectl get pod -o wide
+NAME                          READY   STATUS    RESTARTS   AGE    IP               NODE    NOMINATED NODE   READINESS GATES
+myapp-myapp-6cb564796-xmw87   1/1     Running   0          110s   10.233.102.155   node1   <none>           <none>
+ubuntu@node0:~/myapp$ kubectl get svc
+NAME          TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+kubernetes    ClusterIP   10.233.0.1     <none>        443/TCP        5d17h
+myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
+
+~~~
 
 
 
