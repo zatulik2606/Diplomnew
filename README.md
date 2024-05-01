@@ -295,6 +295,20 @@ UserName: admin Password: prom-operator
 ![Grafana](https://github.com/zatulik2606/Diplomnew/blob/main/screen/grafana.jpg)
 
 
+Скачиваю и устанавливаю qbec.
+
+~~~
+wget https://github.com/splunk/qbec/releases/download/v0.15.2/qbec-linux-amd64.tar.gz
+    gunzip qbec-linux-amd64.tar.gz
+    tar xf qbec-linux-amd64.tar
+    sudo mv qbec /usr/local/bin
+    qbec completion | sudo tee /etc/bash_completion.d/qbec
+qbec init neto --with-example
+~~
+
+
+
+
 **Prometheus**
 
 ![Prometheus](https://github.com/zatulik2606/Diplomnew/blob/main/screen/prometheus.jpg)
