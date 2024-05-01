@@ -296,9 +296,21 @@ UserName: admin Password: prom-operator
 
 
 
+
+**Prometheus**
+
+![Prometheus](https://github.com/zatulik2606/Diplomnew/blob/main/screen/prometheus.jpg)
+
+
+
+Папка для конфигурации helm тестового приложения в  git находится [тут](https://github.com/zatulik2606/Diplomnew/tree/main/myapp/myapp-helm)
+
+
+
 Поменял конфиги через helm и установил приложение.
 
-~~
+
+~~~
 ubuntu@node0:~/myapp$ helm install myapp ./
 NAME: myapp
 LAST DEPLOYED: Wed May  1 10:56:25 2024
@@ -307,7 +319,7 @@ STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 
-~~
+~~~
 
 Проверяю Pod и Service.
 
@@ -326,9 +338,10 @@ myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
 
 
 
-**Prometheus**
 
-![Prometheus](https://github.com/zatulik2606/Diplomnew/blob/main/screen/prometheus.jpg)
+
+
+
 ---
 ### Установка и настройка CI/CD
 
