@@ -337,7 +337,10 @@ myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
 ~~~
 
 
+Проверяю доступ по http.
 
+
+![myappweb](https://github.com/zatulik2606/Diplomnew/blob/main/screen/myappweb.jpg)
 
 
 
