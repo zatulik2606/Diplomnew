@@ -675,12 +675,11 @@ web-app-service   NodePort    10.233.39.139   <none>        80:30000/TCP   60m
 
 Добавил tag 
 
-![tag1.0.0](https://github.com/zatulik2606/Diplomnew/blob/main/screen/tag1.0.0.jpg)
+![tag])(https://github.com/zatulik2606/Diplomnew/blob/main/screen/tag1.0.0.jpg)
 
-Это отображается в web
+Вот , что видим в web
 
-![appweb](https://github.com/zatulik2606/Diplomnew/blob/main/screen/appaftertag1.0.0.jpg)
-
+![appweb1.0](https://github.com/zatulik2606/Diplomnew/blob/main/screen/appaftertag1.0.0.jpg)
 
 
 ---
