@@ -440,6 +440,38 @@ root@debianv:~/diplomnew/CICD#
 
 ~~~
 
+
+Создал файл для подключения runner.
+
+~~~
+
+root@debianv:~/diplomnew/CICD# cat runner-chart-values.yaml
+# The GitLab Server URL (with protocol) that you want to register the runner against
+# ref: https://docs.gitlab.com/runner/commands/index.html#gitlab-runner-register
+#
+gitlabUrl: https://gitlab.com/
+
+# The registration token for adding new runners to the GitLab server
+# Retrieve this value from your GitLab instance
+# For more info: https://docs.gitlab.com/ee/ci/runners/index.html
+#
+runnerRegistrationToken: "glrt-oSkgV4zVSAUM9L9EiKKp"
+
+# For RBAC support:
+rbac:
+    create: true
+
+# Run all containers with the privileged flag enabled
+# This flag allows the docker:dind image to run if you need to run Docker commands
+# Read the docs before turning this on:
+# https://docs.gitlab.com/runner/executors/kubernetes.html#using-dockerdind
+runners:
+    privileged: true
+    executor: kubernetes
+
+~~~
+
+
 ---
 ## Что необходимо для сдачи задания?
 
