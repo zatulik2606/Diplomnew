@@ -673,7 +673,7 @@ web-app-service   NodePort    10.233.39.139   <none>        80:30000/TCP   60m
 
 ~~~
 
-Добавил tag 
+Добавил tag 1.0.0
 
 ![tag])(https://github.com/zatulik2606/Diplomnew/blob/main/screen/tag1.0.0.jpg)
 
@@ -681,6 +681,15 @@ web-app-service   NodePort    10.233.39.139   <none>        80:30000/TCP   60m
 
 ![appweb1.0](https://github.com/zatulik2606/Diplomnew/blob/main/screen/appaftertag1.0.0.jpg)
 
+
+Добавил tag 1.0.2
+
+![tag102](https://github.com/zatulik2606/Diplomnew/blob/main/screen/tag%201.0.2.png)
+
+
+Как появилось в web
+
+![tag102](https://github.com/zatulik2606/Diplomnew/blob/main/screen/appaftertag1.0.2.jpg)
 
 ---
 ## Что необходимо для сдачи задания?
