@@ -657,6 +657,10 @@ Deploy прошел
 
 
 
+Также после сборки приложение появилось в [registry gitlab](registry.gitlab.com/zatulik2606/diplomnew:4cd6fdb8)
+
+
+
 ---
 ## Что необходимо для сдачи задания?
 
