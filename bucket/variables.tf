@@ -15,6 +15,7 @@ variable "token" {
   type = string
 }
 
+
 # Заменить на ID своего образа
 # ID можно узнать с помощью команды yc compute image list
 variable "ubuntu-2004-lts" {
