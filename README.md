@@ -659,6 +659,7 @@ Deploy прошел
 
 Также после сборки приложение появилось в [registry gitlab](registry.gitlab.com/zatulik2606/diplomnew:4cd6fdb8)
 
+![gitlabregistry](https://github.com/zatulik2606/Diplomnew/blob/main/screen/deployingitlabregistry.jpg)
 
 
 ---
