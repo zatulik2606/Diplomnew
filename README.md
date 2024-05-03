@@ -410,6 +410,7 @@ myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
 
 Для удобства запуска собрал образ [там же](https://gitlab.com/zatulik2606/Diplomnew/container_registry/6346310) 
 
+Перенес файл с конфигами в репо [Gitlab](https://gitlab.com/zatulik2606/Diplomnew) 
 
 Установил кластер.
 
