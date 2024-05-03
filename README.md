@@ -637,6 +637,19 @@ deploy:
 ~~~
 
 
+Buil прошел
+
+![build](https://github.com/zatulik2606/Diplomnew/blob/main/screen/buildsuccess.jpg)
+
+Deploy прошел
+
+![Deploy](https://github.com/zatulik2606/Diplomnew/blob/main/screen/deploysuccess.jpg)
+
+Приложение появилось в web
+
+![appweb](https://github.com/zatulik2606/Diplomnew/blob/main/screen/myappweb.jpg)
+
+
 
 ---
 ## Что необходимо для сдачи задания?
