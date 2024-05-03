@@ -535,7 +535,9 @@ runners:
 ~~~
 
 
-Сгенерировал манифест и запустил его
+Сгенерировал манифест и запустил его. 
+
+Файлы с манифестами в [этой папке](https://github.com/zatulik2606/Diplomnew/tree/main/CICD)
 
 ~~~
 root@debianv:~/diplomnew/CICD# helm template --namespace gitlab gitlab-runner -f runner-chart-values.yaml gitlab/gitlab-runner > runner-manifest.yaml
