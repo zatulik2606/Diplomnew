@@ -169,8 +169,18 @@ kube-system   nodelocaldns-j779q                         1/1     Running   0    
 kube-system   nodelocaldns-p9jcw                         1/1     Running   0          98m
 kube-system   nodelocaldns-xwcfg                         1/1     Running   0          98m
 
+
 ~~~
 
+
+Можно скопировать конфу  к себе.
+
+~~~
+root@debianv:~/diplomnew/bucket# scp -o 'StrictHostKeyChecking no' ubuntu@158.160.114.165:/home/ubuntu/.kube/config $HOME/.kube/config
+config                                                                                                                      100% 5661    41.4KB/s   00:00    
+root@debianv:~/diplomnew/bucket# sed -i 's/127.0.0.1/158.160.114.165/g' $HOME/.kube/config
+
+~~~
 
 ---
 ### Создание тестового приложения
