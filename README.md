@@ -691,6 +691,9 @@ web-app-service   NodePort    10.233.39.139   <none>        80:30000/TCP   60m
 
 ![tag102](https://github.com/zatulik2606/Diplomnew/blob/main/screen/appaftertag1.0.2.jpg)
 
+
+Все, что собиралось в регистри, появилось в контейнерах [тут](https://gitlab.com/zatulik2606/Diplomnew/container_registry/6352987).
+
 ---
 ## Что необходимо для сдачи задания?
 
