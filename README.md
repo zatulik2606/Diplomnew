@@ -409,25 +409,36 @@ myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
 Установил кластер.
 
 ~~~
-root@debianv:~/diplomnew/CICD# helm upgrade --install ssss gitlab/gitlab-agent \
-    --namespace gitlab-agent-ssss \
+root@debianv:~/diplomnew/CICD# helm repo add gitlab https://charts.gitlab.io
+helm repo update
+helm upgrade --install gitlab-agent gitlab/gitlab-agent \
+    --namespace gitlab-agent-gitlab-agent \
     --create-namespace \
     --set image.tag=v17.0.0-rc3 \
-    --set config.token=glagent-acxXhE7Sy1muakYtJBGTS6MJaJHB5UT-XYL8-hNsbBLeiV_9qw \
+    --set config.token=glagent-RqZFRBk_2uuVFsc7YJGR8kTwsqX2wVmRyu2EW-Us8y3JUfW3sQ \
     --set config.kasAddress=wss://kas.gitlab.com
 WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /root/.kube/config
 WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /root/.kube/config
-Release "ssss" does not exist. Installing it now.
-NAME: ssss
-LAST DEPLOYED: Fri May  3 14:47:21 2024
-NAMESPACE: gitlab-agent-ssss
+"gitlab" already exists with the same configuration, skipping
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /root/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /root/.kube/config
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "runatlantis" chart repository
+...Successfully got an update from the "gitlab" chart repository
+Update Complete. ⎈Happy Helming!⎈
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /root/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /root/.kube/config
+Release "gitlab-agent" does not exist. Installing it now.
+NAME: gitlab-agent
+LAST DEPLOYED: Fri May  3 15:48:58 2024
+NAMESPACE: gitlab-agent-gitlab-agent
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
 Thank you for installing gitlab-agent.
 
-Your release is named ssss.
+Your release is named gitlab-agent.
 
 ## Changelog
 
@@ -435,7 +446,6 @@ Your release is named ssss.
 
 - The default replica count has been increased from `1` to `2` to allow a zero-downtime upgrade experience.
   You may use `--set replicas=1` to restore the old default behavior.
-root@debianv:~/diplomnew/CICD# 
 
 
 ~~~
