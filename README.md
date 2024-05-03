@@ -498,6 +498,89 @@ deployment.apps/gitlab-runner created
 
 ~~~
 
+После создал файл gitlab-ci.yml .
+
+~~~
+
+stages:
+  - build
+  - deploy
+
+variables:
+  IMAGE_TAG: $CI_COMMIT_SHORT_SHA
+  K8S_NAMESPACE: default
+  K8S_DEPLOYMENT_NAME: web-app-deployment
+  K8S_SERVICE_NAME: web-app-service
+  
+build:  
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:v1.9.0-debug
+    entrypoint: [""]
+  script:
+    - /kaniko/executor
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "${CI_REGISTRY_IMAGE}:${IMAGE_TAG}"
+  only:
+    - main
+
+deploy:
+  image:
+    name: bitnami/kubectl:latest
+    entrypoint: ['']
+  stage: deploy
+  script:
+    - kubectl config get-contexts
+    - kubectl config use-context zatulik2606/Diplomnew:gitlab-agent
+    - |
+      kubectl apply -f - <<EOF
+      ---
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: $K8S_DEPLOYMENT_NAME
+        namespace: $K8S_NAMESPACE
+      spec:
+        replicas: 3
+        selector:
+          matchLabels:
+            app: $K8S_DEPLOYMENT_NAME
+        template:
+          metadata:
+            labels:
+              app: $K8S_DEPLOYMENT_NAME
+          spec:
+            containers:
+              - name: $K8S_DEPLOYMENT_NAME
+                image: $CI_REGISTRY_IMAGE:$IMAGE_TAG
+                ports:
+                  - containerPort: 80
+      ---
+      apiVersion: v1
+      kind: Service
+      metadata:
+        name: $K8S_SERVICE_NAME
+        namespace: $K8S_NAMESPACE
+      spec:
+        selector:
+          app: $K8S_DEPLOYMENT_NAME
+        ports:
+          - name: http
+            protocol: TCP
+            port: 80
+            targetPort: 80
+            nodePort: 30000
+        type: NodePort
+      EOF
+  environment:
+    name: production
+  only:
+    - main
+
+
+~~~
+
 
 
 ---
