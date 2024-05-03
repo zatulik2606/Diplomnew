@@ -373,6 +373,43 @@ myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
 2. При любом коммите в репозиторие с тестовым приложением происходит сборка и отправка в регистр Docker образа.
 3. При создании тега (например, v1.0.0) происходит сборка и отправка с соответствующим label в регистри, а также деплой соответствующего Docker образа в кластер Kubernetes.
 
+
+
+
+Установил кластер.
+
+~~~
+root@debianv:~/diplomnew/CICD# helm upgrade --install ssss gitlab/gitlab-agent \
+    --namespace gitlab-agent-ssss \
+    --create-namespace \
+    --set image.tag=v17.0.0-rc3 \
+    --set config.token=glagent-acxXhE7Sy1muakYtJBGTS6MJaJHB5UT-XYL8-hNsbBLeiV_9qw \
+    --set config.kasAddress=wss://kas.gitlab.com
+WARNING: Kubernetes configuration file is group-readable. This is insecure. Location: /root/.kube/config
+WARNING: Kubernetes configuration file is world-readable. This is insecure. Location: /root/.kube/config
+Release "ssss" does not exist. Installing it now.
+NAME: ssss
+LAST DEPLOYED: Fri May  3 14:47:21 2024
+NAMESPACE: gitlab-agent-ssss
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+Thank you for installing gitlab-agent.
+
+Your release is named ssss.
+
+## Changelog
+
+### 1.17.0
+
+- The default replica count has been increased from `1` to `2` to allow a zero-downtime upgrade experience.
+  You may use `--set replicas=1` to restore the old default behavior.
+root@debianv:~/diplomnew/CICD# 
+
+
+~~~
+
 ---
 ## Что необходимо для сдачи задания?
 
