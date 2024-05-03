@@ -641,9 +641,15 @@ Buil прошел
 
 ![build](https://github.com/zatulik2606/Diplomnew/blob/main/screen/buildsuccess.jpg)
 
+
+[ссылка на build](https://gitlab.com/zatulik2606/Diplomnew/-/jobs/6774169457)
+
 Deploy прошел
 
 ![Deploy](https://github.com/zatulik2606/Diplomnew/blob/main/screen/deploysuccess.jpg)
+
+
+[ссылка на deploy](https://gitlab.com/zatulik2606/Diplomnew/-/jobs/6774169460)
 
 Приложение появилось в web
 
