@@ -662,6 +662,17 @@ Deploy прошел
 ![gitlabregistry](https://github.com/zatulik2606/Diplomnew/blob/main/screen/deployingitlabregistry.jpg)
 
 
+Смотрим в kuber кластер
+
+~~~
+root@debianv:~/diplomnew/bucket# kubectl get svc
+NAME              TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes        ClusterIP   10.233.0.1      <none>        443/TCP        7d19h
+myapp-myapp       NodePort    10.233.54.38    <none>        80:30880/TCP   2d2h
+web-app-service   NodePort    10.233.39.139   <none>        80:30000/TCP   60m
+
+~~~
+
 ---
 ## Что необходимо для сдачи задания?
 
