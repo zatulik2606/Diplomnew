@@ -472,6 +472,14 @@ runners:
 ~~~
 
 
+Сгенерировал манифест
+
+~~~
+root@debianv:~/diplomnew/CICD# helm template --namespace gitlab gitlab-runner -f runner-chart-values.yaml gitlab/gitlab-runner > runner-manifest.yaml
+
+~~~
+
+
 ---
 ## Что необходимо для сдачи задания?
 
