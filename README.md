@@ -694,6 +694,10 @@ web-app-service   NodePort    10.233.39.139   <none>        80:30000/TCP   60m
 
 Все, что собиралось в регистри, появилось в контейнерах Gitlab как образы  [тут](https://gitlab.com/zatulik2606/Diplomnew/container_registry/6352987).
 
+Скрин сборок прилагаю.
+
+![imagesregistry](https://github.com/zatulik2606/Diplomnew/blob/main/screen/versiongeristry.png)
+
 ---
 ## Что необходимо для сдачи задания?
 
