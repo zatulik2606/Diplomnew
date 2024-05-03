@@ -67,6 +67,53 @@
 
 ![net](https://github.com/zatulik2606/Diplomnew/blob/main/screen/network.jpg)
 
+
+IP менятся каждый день, т.к. сервисы прерываемые, поэтому прикладываю terraform plan , чтобы было видно, что файл создавался.
+
+<details>
+
+ ~~~
+root@debianv:~/diplomnew/bucket# terraform plan
+yandex_iam_service_account.sa-terraform: Refreshing state... [id=ajep6shkjhcljpjmb9q0]
+yandex_vpc_network.subnet-zones: Refreshing state... [id=enpiij9hsoetrkukb3mf]
+yandex_iam_service_account_static_access_key.sa-static-key: Refreshing state... [id=aje0k774qf0rsqh4ef0k]
+yandex_resourcemanager_folder_iam_member.terraform-editor: Refreshing state... [id=b1gleu995pjjtd5eficp/editor/serviceAccount:ajep6shkjhcljpjmb9q0]
+yandex_storage_bucket.netology-bucketx: Refreshing state... [id=zatulik-netology-bucketz]
+yandex_vpc_subnet.subnet-zones[2]: Refreshing state... [id=fl8n2fractdsdbjv18s5]
+yandex_vpc_subnet.subnet-zones[1]: Refreshing state... [id=e2l64ngiguf9jh79uk4n]
+yandex_vpc_subnet.subnet-zones[0]: Refreshing state... [id=e9bcv351qujsgca8ib8h]
+yandex_compute_instance.cluster-k8s[0]: Refreshing state... [id=fhmcmhlj93vbm34milnm]
+yandex_compute_instance.cluster-k8s[1]: Refreshing state... [id=epdiqpsb1isceubvipp8]
+yandex_compute_instance.cluster-k8s[2]: Refreshing state... [id=fv4hdn1rv94st83oafmj]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  # yandex_storage_bucket.netology-bucketx will be updated in-place
+  ~ resource "yandex_storage_bucket" "netology-bucketx" {
+        id                    = "zatulik-netology-bucketz"
+        tags                  = {}
+        # (9 unchanged attributes hidden)
+
+      - logging {
+          - target_bucket = "zatulik-netology-bucketz" -> null
+        }
+
+        # (2 unchanged blocks hidden)
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.
+
+Changes to Outputs:
+  ~ external_ip_address_nodes = {
+      ~ node-0 = "51.250.85.78" -> "158.160.114.165"
+      ~ node-1 = "158.160.70.60" -> "158.160.65.118"
+      ~ node-2 = "158.160.134.58" -> "158.160.157.214"
+~~~
+</details>
+
 ---
 ### Создание Kubernetes кластера
 
