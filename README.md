@@ -472,12 +472,22 @@ runners:
 ~~~
 
 
-Сгенерировал манифест
+Сгенерировал манифест и запустил его
 
 ~~~
 root@debianv:~/diplomnew/CICD# helm template --namespace gitlab gitlab-runner -f runner-chart-values.yaml gitlab/gitlab-runner > runner-manifest.yaml
 
+
+root@debianv:~/diplomnew/CICD# kubectl apply -f runner-manifest.yaml
+serviceaccount/gitlab-runner created
+secret/gitlab-runner created
+configmap/gitlab-runner created
+role.rbac.authorization.k8s.io/gitlab-runner created
+rolebinding.rbac.authorization.k8s.io/gitlab-runner created
+deployment.apps/gitlab-runner created
+
 ~~~
+
 
 
 ---
