@@ -173,12 +173,42 @@ kube-system   nodelocaldns-xwcfg                         1/1     Running   0    
 ~~~
 
 
-Можно скопировать конфу  к себе.
+Можно скопировать конфу  к себе и проверить.
 
 ~~~
-root@debianv:~/diplomnew/bucket# scp -o 'StrictHostKeyChecking no' ubuntu@158.160.114.165:/home/ubuntu/.kube/config $HOME/.kube/config
-config                                                                                                                      100% 5661    41.4KB/s   00:00    
-root@debianv:~/diplomnew/bucket# sed -i 's/127.0.0.1/158.160.114.165/g' $HOME/.kube/config
+root@debianv:~/diplomnew/kubespray# scp -o 'StrictHostKeyChecking no' ubuntu@158.160.114.165:/home/ubuntu/.kube/config $HOME/.kube/config
+config                                                                                                                      100% 5661   163.5KB/s   00:00    
+root@debianv:~/diplomnew/kubespray# sed -i 's/127.0.0.1/158.160.114.165/g' $HOME/.kube/config
+root@debianv:~/diplomnew/kubespray# kubectl get pods --all-namespaces
+NAMESPACE     NAME                                                     READY   STATUS    RESTARTS       AGE
+default       myapp-myapp-6cb564796-xmw87                              1/1     Running   1 (120m ago)   45h
+kube-system   calico-kube-controllers-6c7b7dc5d8-lq7bt                 1/1     Running   2 (120m ago)   7d14h
+kube-system   calico-node-4n449                                        1/1     Running   2 (120m ago)   7d14h
+kube-system   calico-node-f8jk4                                        1/1     Running   2 (120m ago)   7d14h
+kube-system   calico-node-gsmmc                                        1/1     Running   2 (120m ago)   7d14h
+kube-system   coredns-69db55dd76-cx7g4                                 1/1     Running   2 (120m ago)   7d14h
+kube-system   coredns-69db55dd76-jjsnq                                 1/1     Running   0              17m
+kube-system   dns-autoscaler-6f4b597d8c-cdcfk                          1/1     Running   0              17m
+kube-system   kube-apiserver-node0                                     1/1     Running   3 (120m ago)   7d14h
+kube-system   kube-controller-manager-node0                            1/1     Running   4 (120m ago)   7d14h
+kube-system   kube-proxy-5j7t2                                         1/1     Running   0              4m18s
+kube-system   kube-proxy-f8rrx                                         1/1     Running   0              4m18s
+kube-system   kube-proxy-ff4q8                                         1/1     Running   0              4m18s
+kube-system   kube-scheduler-node0                                     1/1     Running   3 (120m ago)   7d14h
+kube-system   nginx-proxy-node1                                        1/1     Running   2 (120m ago)   7d14h
+kube-system   nginx-proxy-node2                                        1/1     Running   2 (120m ago)   7d14h
+kube-system   nodelocaldns-j779q                                       1/1     Running   3 (120m ago)   7d14h
+kube-system   nodelocaldns-p9jcw                                       1/1     Running   4 (119m ago)   7d14h
+kube-system   nodelocaldns-xwcfg                                       1/1     Running   3 (119m ago)   7d14h
+monitoring    alertmanager-stable-kube-prometheus-sta-alertmanager-0   2/2     Running   4 (120m ago)   6d23h
+monitoring    prometheus-stable-kube-prometheus-sta-prometheus-0       2/2     Running   4 (120m ago)   6d23h
+monitoring    stable-grafana-776646478d-2lmc5                          3/3     Running   7 (120m ago)   6d23h
+monitoring    stable-kube-prometheus-sta-operator-6cc67445fb-ctkrp     1/1     Running   2 (120m ago)   6d23h
+monitoring    stable-kube-state-metrics-75bf56f4c8-6qjjw               1/1     Running   3 (118m ago)   6d23h
+monitoring    stable-prometheus-node-exporter-9626j                    1/1     Running   2 (120m ago)   6d23h
+monitoring    stable-prometheus-node-exporter-v9w5k                    1/1     Running   2 (120m ago)   6d23h
+monitoring    stable-prometheus-node-exporter-wn7wl                    1/1     Running   2 (120m ago)   6d23h
+
 
 ~~~
 
