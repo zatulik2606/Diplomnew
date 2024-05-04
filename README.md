@@ -675,7 +675,7 @@ web-app-service   NodePort    10.233.39.139   <none>        80:30000/TCP   60m
 
 Добавил tag 1.0.0
 
-![tag])(https://github.com/zatulik2606/Diplomnew/blob/main/screen/tag1.0.0.jpg)
+![tag](https://github.com/zatulik2606/Diplomnew/blob/main/screen/tag1.0.0.jpg)
 
 Вот , что видим в web
 
