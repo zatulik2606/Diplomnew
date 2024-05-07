@@ -431,6 +431,10 @@ myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
 
 
 
+## Terraform cloud( альтернатива Atlantis)
+
+
+
 Для проверки добавления изменений в Terraform создал временный [repo](https://github.com/zatulik2606/terra).
 
 В него внес первоначальные файлы по настройке и прогнал в  [Terraform plan](https://app.terraform.io/app/zevs/workspaces/terrass/runs/run-EAST73dK7aQ6Avtm)
