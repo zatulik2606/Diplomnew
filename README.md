@@ -462,9 +462,9 @@ To github.com:zatulik2606/terraform_repo.git
 
 
 
-Pull request выполнился, но с ошибкой, т.к. он обращается к terrafrom cloud и нужен запуск VPN.
+Pull request выполнилс после включения vpn.
 
-https://github.com/zatulik2606/terraform_repo/pull/2
+[ссылка на pull request](https://github.com/zatulik2606/terraform_repo/pull/3)
 
 ---
 ### Установка и настройка CI/CD
