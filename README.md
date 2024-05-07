@@ -430,41 +430,19 @@ myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
 ![myappweb](https://github.com/zatulik2606/Diplomnew/blob/main/screen/myappweb.jpg)
 
 
+Для проверки добавления изменений в Terraform создал временный [repo]((https://github.com/zatulik2606/terra).
 
-Для решения задачи по Atlantis создал отдельную [репо](https://github.com/zatulik2606/terraform_repo)
-
-
-В ней задал [deploy](https://github.com/zatulik2606/terraform_repo/blob/master/atlantis/deploy.yml)  и  скрипт по запуску [atlantis server](https://github.com/zatulik2606/terraform_repo/blob/master/atlantis/atlantis.sh).
-
-
-Запустил pull request в отдельную ветку.
-
-~~~
-root@debianv:~/terraform_repo/atlantis# git checkout -b main
-Переключено на новую ветку «main»
-root@debianv:~/terraform_repo/atlantis# git push origin main
-Перечисление объектов: 10, готово.
-Подсчет объектов: 100% (10/10), готово.
-При сжатии изменений используется до 2 потоков
-Сжатие объектов: 100% (7/7), готово.
-Запись объектов: 100% (9/9), 2.08 KiB | 2.08 MiB/s, готово.
-Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 1 local object.
-remote: 
-remote: Create a pull request for 'main' on GitHub by visiting:
-remote:      https://github.com/zatulik2606/terraform_repo/pull/new/main
-remote: 
-To github.com:zatulik2606/terraform_repo.git
- * [new branch]      main -> main
-
-~~~
+В него внес первоначальные файлы по настройке и прогнал [plan](https://app.terraform.io/app/zevs/workspaces/terrass/runs/run-EAST73dK7aQ6Avtm)
 
 
 
 
-Pull request выполнилс после включения vpn.
 
-[ссылка на pull request](https://github.com/zatulik2606/terraform_repo/pull/3)
+
+
+
+
+
 
 ---
 ### Установка и настройка CI/CD
