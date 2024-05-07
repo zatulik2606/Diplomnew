@@ -438,7 +438,7 @@ myapp-myapp   NodePort    10.233.54.38   <none>        80:30880/TCP   2m1s
 
 Видим такой скрин в terraform cloud.
 
-![terraform cloud](https://github.com/zatulik2606/Diplomnew/tree/main/screen)
+![terraform cloud](https://github.com/zatulik2606/Diplomnew/blob/main/screen/terraform%20cloud.jpg)
 
 
 
